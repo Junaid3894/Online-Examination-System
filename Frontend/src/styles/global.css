@@ -1,0 +1,140 @@
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #172033;
+  background: #f8fafc;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+
+  --primary: #4f46e5;
+  --primary-dark: #4338ca;
+  --ink: #172033;
+  --muted: #70798d;
+  --border: #e5e9f2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: -0.03em;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 11px 16px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+
+.button-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.button-primary:hover {
+  background: var(--primary-dark);
+}
+
+.button-outline {
+  background: white;
+  border-color: #d7dce8;
+  color: #344054;
+}
+
+.button-outline:hover {
+  background: #f8fafc;
+}
+
+.button-ghost {
+  background: transparent;
+  color: #475569;
+}
+
+.button-small {
+  padding: 8px 11px;
+  font-size: 0.8rem;
+}
+
+.page-container {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+  padding: 34px 0 64px;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--primary);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.empty-state {
+  padding: 28px;
+  border: 1px dashed #cbd5e1;
+  border-radius: 14px;
+  background: white;
+  color: var(--muted);
+  text-align: center;
+}
+
+.form-error {
+  margin: 12px 0 0;
+  color: #b91c1c;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 600px) {
+  .page-container {
+    width: calc(100% - 30px);
+  }
+}

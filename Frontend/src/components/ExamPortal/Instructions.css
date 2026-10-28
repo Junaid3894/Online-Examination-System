@@ -1,0 +1,200 @@
+
+/* File: src/components/ExamPortal/Instructions.css */
+
+.instructions-page {
+  height: 100vh;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  color: #526176;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+}
+
+.instructions-scroll {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 8px 24px 35px;
+  line-height: 1.65;
+  font-size: 16px;
+}
+
+.instructions-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 30px;
+  font-weight: 400;
+  margin: 0 0 26px;
+  color: #526176;
+}
+
+.instructions-heading {
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: underline;
+  margin: 30px 0 18px;
+}
+
+.instructions-list {
+  padding-left: 35px;
+}
+
+.instructions-list > li {
+  padding-left: 2px;
+  margin-bottom: 20px;
+}
+
+.symbol-examples {
+  display: grid;
+  gap: 10px;
+  margin: 12px 0 20px 5px;
+}
+
+.symbol-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.instruction-symbol {
+  width: 36px;
+  height: 34px;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  position: relative;
+  border: 1px solid #aaa;
+  border-radius: 7px;
+}
+
+.instruction-symbol.not-visited {
+  background: linear-gradient(#fff, #d4d4d4);
+  color: #334155;
+  border-color: #aaa;
+}
+
+.instruction-symbol.not-answered {
+  background: #f04424;
+  border-color: #b91c1c;
+  clip-path: polygon(0 0, 100% 0, 100% 72%, 50% 100%, 0 72%);
+  border-radius: 0;
+}
+
+.instruction-symbol.answered {
+  background: #48bd0c;
+  border-color: #328c06;
+  clip-path: polygon(0 0, 100% 0, 100% 72%, 50% 100%, 0 72%);
+  border-radius: 0;
+}
+
+.instruction-symbol.marked,
+.instruction-symbol.answered-marked {
+  background: #8050c9;
+  border: 2px solid #5b3595;
+  border-radius: 50%;
+  width: 39px;
+  height: 39px;
+}
+
+.instruction-symbol.answered-marked i {
+  position: absolute;
+  right: -3px;
+  bottom: -2px;
+  width: 14px;
+  height: 14px;
+  background: #26b34a;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  font-size: 10px;
+  font-style: normal;
+  display: grid;
+  place-items: center;
+}
+
+.instruction-warning em {
+  color: #f04438;
+  font-style: italic;
+}
+
+.sub-instructions {
+  padding-left: 25px;
+  margin-top: 15px;
+}
+
+.sub-instructions li {
+  padding-left: 4px;
+  margin: 12px 0;
+}
+
+.exam-rules {
+  padding-left: 35px;
+}
+
+.exam-rules li {
+  margin: 8px 0;
+}
+
+.instructions-footer {
+  flex-shrink: 0;
+  background: #fff;
+  padding: 10px 12px 0;
+  border-top: 1px solid #e5e7eb;
+  box-shadow: 0 -4px 12px #00000008;
+  z-index: 2;
+}
+
+.instructions-footer p {
+  color: #b91c1c;
+  font-size: 12px;
+  margin: 0 0 6px;
+}
+
+.instructions-footer button {
+  width: 100%;
+  height: 46px;
+  background: #19265f;
+  border: 0;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.instructions-footer button:hover {
+  background: #243780;
+}
+
+@media (max-width: 600px) {
+  .instructions-scroll {
+    padding: 12px 14px 25px;
+    font-size: 14px;
+  }
+
+  .instructions-title {
+    font-size: 25px;
+    margin-bottom: 22px;
+  }
+
+  .instructions-heading {
+    font-size: 15px;
+  }
+
+  .symbol-row {
+    align-items: flex-start;
+    font-size: 12px;
+  }
+
+  .instruction-symbol {
+    margin-top: 2px;
+  }
+}
